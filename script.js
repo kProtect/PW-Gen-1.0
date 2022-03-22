@@ -1,10 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-const lower =["a","b","c","d","e","f","g","h","i","j","k","l","n","m","o","p","q","r","s","t","u","v","w","x","y","z"];
-const upper =["A","B","C","D","E","F","G","H","I","J","K","L","N","M","O","P","Q","R","S","T","U","v","W","X","Y","Z"];
-const num =["0","1","2","3","4","5","6","7","8","9"];
-const special =["!","#","$","%","^","&","*","(",")","-","_","=","+"];
-const chars = '';
+var lower =["a","b","c","d","e","f","g","h","i","j","k","l","n","m","o","p","q","r","s","t","u","v","w","x","y","z"];
+var upper =["A","B","C","D","E","F","G","H","I","J","K","L","N","M","O","P","Q","R","S","T","U","v","W","X","Y","Z"];
+var num =["0","1","2","3","4","5","6","7","8","9"];
+var special =["!","#","$","%","^","&","*","(",")","-","_","=","+"];
+var chars = '';
 
 
 
@@ -48,7 +48,7 @@ function generatePassword() {
 
   var userLower = confirm("Include lower case?");
   var userUpper = confirm("Include Upper case?");
-  var userNum = confirm("Include Num?");
+  var userNum = confirm("Include Number?");
   var userSpeical = confirm("Include Special case?");
 
   if (userLower) {
@@ -72,13 +72,14 @@ function generatePassword() {
     return generatePassword();
   }
 
-  for ( var i=0; i<userLength; i++){
+  for ( var i=0; i < userLength; i++){
     pw += chars.charAt(Math.floor(Math.random() * chars.length));
   }
   
   return pw;
 
   }
+
 
 
 
